@@ -1,0 +1,7 @@
+Stanze: biblioteca, N10, N11, atrio, laboratorio
+Stanze speciali: cantina Buia 
+Inizio: atrio
+Vincente: biblioteca
+Attrezzi: osso 1 atrio, lanterna 3 N10
+Uscite:  biblioteca sud atrio, atrio nord biblioteca, atrio ovest laboratorio, atrio est N11, atrio sud N10, laboratorio est atrio, laboratorio ovest N11, N11 est laboratorio, N11 ovest atrio, N10 nord atrio, N10 ovest laboratorio, N10 est N11, N10 sud cantina, cantina sud biblioteca
+Personaggi: Merlino Mago atrio, Milo Cane N11, Kika Strega cantina

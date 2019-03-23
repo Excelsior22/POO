@@ -1,0 +1,29 @@
+<p>
+Una software house deve ristrutturare una applicazione che simula le dinamiche di un parco naturale. Nel parco ci sono due tipologie di animali: Erbivori e Carnivori, modellati dalle corrispondenti classi. Il parco e' modellato dalla classe <tt>Territorio</tt>, che gestisce due mappe che associano ad una posizione la presenza di un animale (erbivoro o carnivoro).
+</p>
+<p>
+Erbivori e carnivori hanno diverse proprieta' in comune (forza, livello di cibo, probabilita' di riproduzione, anni, posizione), ma differiscono per il comportameto. Entrambi si riproducono e muoiono (per mancanza di cibo o per vecchiaia), tuttavia i carnivori cacciano, mentre gli erbivori si spostano nel territorio (se non lo fanno non si nutrono). La caccia dei carnivori consiste nel cercare nelle adiacenze della propria posizione un animale piu' debole (con minor forza); se lo trovano, lo mangiano: ne prendono il posto e aumentano il proprio livello di cibo.
+NB: come si puo' osservare dal codice, per sempicita' le forze di carnivori ed erbivori sono costanti fissate al momento della creazione degli oggetti) e i carnivori hanno piu' forza degli erbivori. 
+
+</p>
+<p>
+Ci si e' resi conto che il software non e' ben progettato.
+<ul>
+<li>
+DOMANDA 1 (5%): nelle mappe <tt>posizione2erbivoro</tt> e <tt>posizione2carnivoro</tt> ci sono chiavi (oggetti <tt>Posizione</tt>) duplicate. Perche'? (scriverlo in un commento di max due righe, all'inizio della classe <tt>Territorio</tt>) Risolvere il problema.
+</li>
+<li>
+DOMANDA 2 (15%): nella classe <tt>Territorio</tt> scrivere il metodo
+<tt>Set&lt;Posizione&gt; posizioniErbivoriVecchi()</tt>: deve restituire l'insieme delle posizioni dove si trovano gli erbivori piu' vecchi (cioe' gli erbivori che hanno eta' massima). E' possibile introdurre nuove classi.
+</li>
+<li>
+DOMANDA 3 (20%): scrivere una classe di test con almeno tre metodi di test per il metodo <tt>Map&lt;Integer, Set&lt;Erbivoro&gt;&gt; anno2erbivori()</tt> della classe <tt>Territorio</tt> (vedi DOMANDA 4).
+</li>
+<li>
+DOMANDA 4 (20%): nella classe <tt>Territorio</tt> scrivere il metodo <tt>Map&lt;Integer, Set&lt;Erbivoro&gt;&gt; anno2erbivori()</tt>: restituisce una mappa che ha per chiave un anno, e per valore gli erbivori con tale anno
+</li>
+<li>
+DOMANDA 5 (40%): ci sono molte linee di codice in comune tra <tt>Erbivoro</tt> e <tt>Carnivoro</tt>, cosi' come nella classe <tt>Territorio</tt> ci sono molti metodi che differiscono solo per la tipologia di animale. Un progettista esperto ci fa notare che e' opportuno introdurre una classe astratta <tt>Animale</tt>, che deve essere estesa da <tt>Erbivoro</tt> e <tt>Carnivoro</tt>, e che nella classe <tt>Territorio</tt> si deve usare una sola mappa, che associa una posizione ad un animale. Implementare le modifiche suggerite dal progettista. Anche i metodi delle domande 2 e 4 dovranno essere cambiati per poter lavorare su oggetti <tt>Animale</tt> anzicche' su oggetti <tt>Erbivoro</tt>; in pratica si avranno i metodi <tt>Set&lt;Posizione&gt; posizioniAnimaliVecchi()</tt>, <tt>Map&lt;Integer, Set&lt;Animale&gt;&gt; anni2animali()</tt> (non e' necessario modificare la classe di test). <br />
+NB: (facoltativo, molto semplice) per far funzionare il simulatore con la nuova implementazione e' necessario modificare anche il medoto run() della classe <tt>Simulatore</tt> (facile) e usare il codice commentato nella classe <tt>VisualizzaTerritorio</tt> (banale).
+</li>
+</ul>
